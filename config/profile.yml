@@ -1,0 +1,72 @@
+# Career-Ops Profile Configuration
+# This is the single source of truth for your personal data across all modes.
+
+candidate:
+  full_name: "Abhi Guruprasad"
+  email: "agurupra@gmail.com"
+  phone: "(518) 618-7343"
+  location: "Washington, DC Metro 20105"
+  linkedin: "linkedin.com/in/abhiguru"
+  portfolio_url: ""
+  github: ""
+  twitter: ""
+
+target_roles:
+  primary:
+    - "Data Architect"
+    - "Senior Data Engineer"
+    - "Principal Data Engineer"
+    - "Staff Data Engineer"
+  archetypes:
+    - name: "Data Architect"
+      level: "Senior/Principal"
+      fit: "primary"
+    - name: "Senior/Staff Data Engineer"
+      level: "Senior/Staff"
+      fit: "primary"
+    - name: "Cloud Data Platform Engineer"
+      level: "Senior/Principal"
+      fit: "secondary"
+    - name: "Analytics Engineer / BI Architect"
+      level: "Senior"
+      fit: "adjacent"
+
+narrative:
+  headline: "Data Architect with 15+ years building enterprise-scale data platforms across multi-cloud environments"
+  exit_story: "Deep expertise in DSCSA-compliant pharmaceutical data ecosystems, multi-cloud migration (Azure + AWS), and metadata-driven orchestration at scale."
+  superpowers:
+    - "Multi-cloud data architecture (Azure Synapse, Databricks, AWS Glue, Snowflake)"
+    - "Metadata-driven ETL/ELT orchestration at enterprise scale"
+    - "DSCSA/regulatory compliance data engineering"
+    - "Database migrations and modernization (SQL Server, Sybase → cloud-native)"
+    - "BI & analytics delivery (Power BI, Datadog, Quicksight)"
+  proof_points:
+    - name: "NABP DSCSA Pulse Platform"
+      hero_metric: "Reduced pharmaceutical supply chain data latency from hours to minutes; automated 600+ SQL jobs"
+    - name: "Medalion Lakehouse — Azure Databricks + Delta Lake"
+      hero_metric: "Bronze/Silver/Gold architecture supporting real-time DSCSA regulatory reporting"
+    - name: "USDA Database Migration"
+      hero_metric: "Migrated 15 servers / 100+ databases (3TB+) ahead of schedule, securing $1M+ additional contract revenue"
+    - name: "Freddie Mac Privileged User Monitoring"
+      hero_metric: "Reduced manual compliance review effort from 40+ hours to under 2 hours"
+
+compensation:
+  target_range: "$150K-$200K"
+  currency: "USD"
+  minimum: "$150K"
+  location_flexibility: "Remote only, no exceptions"
+
+location:
+  country: "United States"
+  city: "Washington, DC Metro"
+  timezone: "EST"
+  visa_status: "No sponsorship needed"
+
+deal_breakers:
+  work_arrangement:
+    - "Any on-site requirement (hybrid or on-site) — remote only, no exceptions"
+  companies_blacklist:
+    - "curanahealth.com"
+
+cv:
+  output_format: "html"

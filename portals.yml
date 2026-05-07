@@ -1,0 +1,334 @@
+# Portal Scanner Configuration
+# Customized for: Abhi Guruprasad — Data Architect / Principal Data Engineer
+# Target: Remote US roles, $150K+
+
+title_filter:
+  positive:
+    # -- Data Architecture --
+    - "Data Architect"
+    - "Enterprise Architect"
+    - "Cloud Architect"
+    - "Solution Architect"
+    - "Solutions Architect"
+    - "Data Platform Architect"
+    - "Analytics Architect"
+    # -- Senior / Staff / Principal Data Engineering --
+    - "Data Engineer"
+    - "Staff Data"
+    - "Principal Data"
+    - "Senior Data"
+    - "Lead Data"
+    - "Data Platform"
+    - "Data Infrastructure"
+    - "Platform Engineer"
+    # -- Cloud & Analytics --
+    - "Analytics Engineer"
+    - "BI Engineer"
+    - "BI Architect"
+    - "Databricks"
+    - "Snowflake"
+    - "Azure Data"
+    - "AWS Data"
+    # -- Governance & MDM --
+    - "Data Governance"
+    - "Master Data"
+    - "MDM"
+    - "Data Mesh"
+    - "Data Lakehouse"
+  negative:
+    - "Junior"
+    - "Associate"
+    - "Intern"
+    - "Entry Level"
+    - "Data Scientist"
+    - "Machine Learning"
+    - "ML Engineer"
+    - "AI Engineer"
+    - "Java "
+    - "iOS"
+    - "Android"
+    - "PHP"
+    - "Ruby"
+    - "Salesforce Admin"
+    - "SAP "
+    - "COBOL"
+    - "Mainframe"
+    - "Blockchain"
+    - "Web3"
+    - "Crypto"
+    - "Game"
+  seniority_boost:
+    - "Senior"
+    - "Staff"
+    - "Principal"
+    - "Lead"
+    - "Head of"
+    - "Director"
+    - "Architect"
+
+# -- Search queries --
+
+search_queries:
+
+  # -- Ashby --
+  - name: Ashby — Data Architect
+    query: 'site:jobs.ashbyhq.com "Data Architect" OR "Principal Data Engineer" remote'
+    enabled: true
+
+  - name: Ashby — Senior Data Engineer
+    query: 'site:jobs.ashbyhq.com "Senior Data Engineer" OR "Staff Data Engineer" OR "Lead Data Engineer" remote'
+    enabled: true
+
+  - name: Ashby — Data Platform
+    query: 'site:jobs.ashbyhq.com "Data Platform" OR "Analytics Engineer" OR "Data Infrastructure" remote'
+    enabled: true
+
+  # -- Greenhouse --
+  - name: Greenhouse — Data Architect
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Data Architect" OR "Principal Data Engineer" remote'
+    enabled: true
+
+  - name: Greenhouse — Senior Data Engineer
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Senior Data Engineer" OR "Staff Data Engineer" remote'
+    enabled: true
+
+  - name: Greenhouse — Data Platform / Analytics Engineer
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Data Platform Engineer" OR "Analytics Engineer" OR "Data Infrastructure" remote'
+    enabled: true
+
+  # -- Lever --
+  - name: Lever — Data Architect / Principal DE
+    query: 'site:jobs.lever.co "Data Architect" OR "Principal Data Engineer" OR "Staff Data Engineer" remote'
+    enabled: true
+
+  # -- LinkedIn / Indeed / remote boards --
+  - name: RemoteOK — Data roles
+    query: 'site:remoteok.com "Data Architect" OR "Data Engineer" OR "Analytics Engineer" senior'
+    enabled: true
+
+  - name: WeWorkRemotely — Data Engineering
+    query: 'site:weworkremotely.com "Data Architect" OR "Data Engineer" OR "Data Platform" senior'
+    enabled: true
+
+  - name: Himalayas — Remote Data Architect
+    query: 'site:himalayas.app "Data Architect" OR "Principal Data Engineer" OR "Staff Data Engineer" remote'
+    enabled: true
+
+  - name: Himalayas — Remote Analytics Engineer
+    query: 'site:himalayas.app "Analytics Engineer" OR "Data Platform" OR "Data Infrastructure" remote'
+    enabled: true
+
+  # -- Cloud platform data roles --
+  - name: Databricks jobs
+    query: '"Data Architect" OR "Principal Data Engineer" OR "Staff Data Engineer" site:databricks.com/company/careers remote'
+    enabled: true
+
+  - name: Snowflake jobs
+    query: '"Data Architect" OR "Principal Data Engineer" OR "Analytics Engineer" site:careers.snowflake.com remote'
+    enabled: true
+
+  - name: dbt Labs jobs
+    query: '"Data Engineer" OR "Analytics Engineer" OR "Architect" site:getdbt.com/careers OR site:jobs.lever.co/dbtlabs remote'
+    enabled: true
+
+  - name: Fivetran jobs
+    query: '"Data Engineer" OR "Data Architect" OR "Solutions Engineer" site:fivetran.com/careers remote'
+    enabled: true
+
+  # -- Enterprise / cloud vendor roles --
+  - name: Microsoft Azure Data roles
+    query: 'site:careers.microsoft.com "Data Architect" OR "Principal Data Engineer" OR "Staff Data Engineer" remote'
+    enabled: true
+
+  - name: AWS Data roles
+    query: 'site:amazon.jobs "Data Architect" OR "Principal Data Engineer" OR "Data Platform" remote'
+    enabled: true
+
+  - name: Google Cloud Data roles
+    query: 'site:careers.google.com "Data Architect" OR "Principal Data Engineer" OR "Analytics Engineer" remote'
+    enabled: true
+
+  # -- YC / startup boards --
+  - name: YC Jobs — Data Architect / DE
+    query: 'site:workatastartup.com "Data Architect" OR "Principal Data Engineer" OR "Staff Data Engineer" remote'
+    enabled: true
+
+  # -- HN Who's Hiring --
+  - name: HN Who's Hiring — Remote Data Architect
+    query: 'site:news.ycombinator.com "Data Architect" OR "Principal Data Engineer" remote'
+    enabled: true
+
+# -- Tracked companies --
+# Companies whose career pages are checked directly.
+
+tracked_companies:
+
+  # -- Data & Cloud Platforms --
+
+  - name: Databricks
+    careers_url: https://www.databricks.com/company/careers/open-positions
+    scan_method: websearch
+    scan_query: 'site:databricks.com/company/careers "Data Architect" OR "Data Engineer" OR "Solutions Architect" remote'
+    notes: "Lakehouse platform — highly relevant given Abhi's Databricks/Delta Lake experience."
+    enabled: true
+
+  - name: Snowflake
+    careers_url: https://careers.snowflake.com
+    scan_method: websearch
+    scan_query: 'site:careers.snowflake.com "Data Architect" OR "Data Engineer" OR "Solutions Architect" remote'
+    notes: "Cloud data warehouse — Abhi has Snowflake + Azure integration experience."
+    enabled: true
+
+  - name: dbt Labs
+    careers_url: https://job-boards.greenhouse.io/dbtlabs
+    api: https://boards-api.greenhouse.io/v1/boards/dbtlabs/jobs
+    notes: "Analytics engineering platform — Abhi has dbt experience."
+    enabled: true
+
+  - name: Fivetran
+    careers_url: https://job-boards.greenhouse.io/fivetran
+    api: https://boards-api.greenhouse.io/v1/boards/fivetran/jobs
+    notes: "ELT / data integration platform."
+    enabled: true
+
+  - name: Hightouch
+    careers_url: https://job-boards.greenhouse.io/hightouch
+    api: https://boards-api.greenhouse.io/v1/boards/hightouch/jobs
+    notes: "Data activation / reverse ETL platform. Has solutions engineering roles."
+    enabled: true
+
+  - name: Monte Carlo
+    careers_url: https://job-boards.greenhouse.io/montecarlodata
+    api: https://boards-api.greenhouse.io/v1/boards/montecarlodata/jobs
+    notes: "Data observability platform."
+    enabled: true
+
+  - name: Atlan
+    careers_url: https://jobs.lever.co/atlan
+    notes: "Data catalog and governance platform — relevant to Abhi's MDM/governance work."
+    enabled: true
+
+  - name: Alation
+    careers_url: https://job-boards.greenhouse.io/alation
+    api: https://boards-api.greenhouse.io/v1/boards/alation/jobs
+    notes: "Data catalog / governance. Relevant to Unity Catalog / metadata work."
+    enabled: true
+
+  - name: Collibra
+    careers_url: https://job-boards.greenhouse.url/collibra
+    scan_method: websearch
+    scan_query: 'site:collibra.com/careers "Data Architect" OR "Solutions Engineer" OR "Data Engineer" remote'
+    notes: "Data governance and catalog platform."
+    enabled: true
+
+  - name: Informatica
+    careers_url: https://jobs.informatica.com
+    scan_method: websearch
+    scan_query: 'site:informatica.com/about/careers "Data Architect" OR "Principal Engineer" OR "Solutions Architect" remote'
+    notes: "ETL/ELT, MDM, data governance — strong match to Abhi's background."
+    enabled: true
+
+  - name: Talend
+    careers_url: https://www.qlik.com/us/company/careers
+    scan_method: websearch
+    scan_query: '"Data Architect" OR "Data Engineer" OR "Solutions Architect" site:qlik.com/careers remote'
+    notes: "Talend (now Qlik). Data integration and ETL."
+    enabled: true
+
+  - name: Starburst
+    careers_url: https://job-boards.greenhouse.io/starburstdata
+    api: https://boards-api.greenhouse.io/v1/boards/starburstdata/jobs
+    notes: "Trino-based data lake analytics. Has Solutions Engineer / SA roles."
+    enabled: true
+
+  - name: Tinybird
+    careers_url: https://jobs.ashbyhq.com/tinybird
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/tinybird'
+    notes: "Real-time data platform. Remote-friendly."
+    enabled: true
+
+  # -- Cloud Vendors (data-focused roles) --
+
+  - name: Astronomer
+    careers_url: https://job-boards.greenhouse.io/astronomer
+    api: https://boards-api.greenhouse.io/v1/boards/astronomer/jobs
+    notes: "Managed Airflow / Astro. Data orchestration platform."
+    enabled: true
+
+  - name: Prefect
+    careers_url: https://jobs.lever.co/prefect
+    notes: "Data workflow orchestration (Python-native). Remote-first."
+    enabled: true
+
+  - name: Dagster Labs
+    careers_url: https://jobs.lever.co/dagsterlabs
+    notes: "Data orchestration and asset graph platform."
+    enabled: true
+
+  # -- Healthcare / Pharma Data (DSCSA expertise) --
+
+  - name: Veeva Systems
+    careers_url: https://job-boards.greenhouse.io/veeva
+    api: https://boards-api.greenhouse.io/v1/boards/veeva/jobs
+    notes: "Cloud software for life sciences. DSCSA compliance highly relevant."
+    enabled: true
+
+  - name: Medidata Solutions
+    careers_url: https://job-boards.greenhouse.io/medidata
+    api: https://boards-api.greenhouse.io/v1/boards/medidata/jobs
+    notes: "Clinical data platform (Dassault subsidiary). Pharma data expertise relevant."
+    enabled: true
+
+  # -- Financial Services & FinTech --
+
+  - name: Stripe
+    careers_url: https://stripe.com/jobs
+    scan_method: websearch
+    scan_query: 'site:stripe.com/jobs "Data Engineer" OR "Data Architect" OR "Analytics Engineer" remote'
+    notes: "Payments platform. Strong data engineering org."
+    enabled: true
+
+  - name: Plaid
+    careers_url: https://plaid.com/careers
+    scan_method: websearch
+    scan_query: 'site:plaid.com/careers "Data Engineer" OR "Data Architect" OR "Analytics Engineer" remote'
+    notes: "Financial data infrastructure."
+    enabled: true
+
+  - name: Capital One
+    careers_url: https://www.capitalonecareers.com
+    scan_method: websearch
+    scan_query: 'site:capitalonecareers.com "Data Architect" OR "Principal Data Engineer" OR "Staff Data Engineer" remote'
+    notes: "Large data engineering org. Remote-friendly."
+    enabled: true
+
+  # -- Enterprise Tech / Consulting --
+
+  - name: Palantir
+    careers_url: https://jobs.lever.co/palantir
+    notes: "Data platform / FDE roles. Relevant to large-scale data architecture."
+    enabled: true
+
+  - name: ThoughtWorks
+    careers_url: https://www.thoughtworks.com/careers
+    scan_method: websearch
+    scan_query: 'site:thoughtworks.com/careers "Data Architect" OR "Principal Data Engineer" OR "Lead Data Engineer" remote'
+    notes: "Tech consultancy. Strong data platform / architecture practice."
+    enabled: true
+
+  # -- Government / Public Sector adjacent --
+
+  - name: Leidos
+    careers_url: https://careers.leidos.com
+    scan_method: websearch
+    scan_query: 'site:careers.leidos.com "Data Architect" OR "Data Engineer" OR "Cloud Architect" remote'
+    notes: "US federal IT. Relevant to Abhi's USDA background."
+    enabled: true
+
+  - name: SAIC
+    careers_url: https://jobs.saic.com
+    scan_method: websearch
+    scan_query: 'site:jobs.saic.com "Data Architect" OR "Principal Data Engineer" remote'
+    notes: "Government IT. Relevant to USDA background."
+    enabled: true
